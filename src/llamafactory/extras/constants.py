@@ -1218,6 +1218,10 @@ register_model_group(
             DownloadSource.DEFAULT: "Qwen/Qwen2-72B-Instruct",
             DownloadSource.MODELSCOPE: "qwen/Qwen2-72B-Instruct",
         },
+        "Qwen2-72B-Instruct": {
+            DownloadSource.DEFAULT: "Qwen/Qwen2-72B-Instruct",
+            DownloadSource.MODELSCOPE: "qwen/Qwen2-72B-Instruct"
+        },
         "Qwen2-MoE-57B-Chat": {
             DownloadSource.DEFAULT: "Qwen/Qwen2-57B-A14B-Instruct",
             DownloadSource.MODELSCOPE: "qwen/Qwen2-57B-A14B-Instruct",

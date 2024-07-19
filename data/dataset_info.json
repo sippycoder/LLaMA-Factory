@@ -571,5 +571,54 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "infinity_instruct_0625": {
+    "hf_hub_url": "BAAI/Infinity-Instruct",
+    "ms_hub_url": "AI-ModelScope/Infinity-Instruct",
+    "subset": "0625",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system"
+    }
+  },
+  "infinity_instruct_3M": {
+    "hf_hub_url": "BAAI/Infinity-Instruct",
+    "ms_hub_url": "AI-ModelScope/Infinity-Instruct",
+    "subset": "3M",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system"
+    }
+  },
+  "xlam_function_calling_60k": {
+    "hf_hub_url": "Salesforce/xlam-function-calling-60k",
+    "ms_hub_url": "Salesforce/xlam-function-calling-60k",
+    "columns": {
+      "tools": "tools",
+      "prompt": "query",
+      "response": "answers"
+    }
+  },
+  "nucleus_regress": {
+    "file_name": "nucleus_regress.json",
+    "load_from": "file",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
   }
 }
