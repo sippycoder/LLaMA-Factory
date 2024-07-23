@@ -620,5 +620,21 @@
     "columns": {
       "messages": "conversations"
     }
+  },
+  "NuminaMath_CoT": {
+    "hf_hub_url": "AI-MO/NuminaMath-CoT",
+    "ms_hub_url": "AI-MO/NuminaMath-CoT",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    }
+  },
+  "NuminaMath_TIR": {
+    "hf_hub_url": "AI-MO/NuminaMath-TIR",
+    "ms_hub_url": "AI-MO/NuminaMath-TIR",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    }
   }
 }
