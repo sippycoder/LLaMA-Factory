@@ -13,6 +13,15 @@ ARG INSTALL_VLLM=false
 ARG INSTALL_DEEPSPEED=false
 ARG INSTALL_FLASHATTN=false
 ARG PIP_INDEX=https://pypi.org/simple
+ARG CUDA_INSTALL_PATH=/usr/local/cuda
+
+ENV CUDACXX=${CUDA_INSTALL_PATH}/bin/nvcc
+
+# Install cutlass
+WORKDIR /root
+RUN git clone --depth 1 --branch v3.5.0 https://github.com/NVIDIA/cutlass.git
+WORKDIR /root/cutlass/build
+RUN cmake .. -DCUTLASS_NVCC_ARCHS=80
 
 # Set the working directory
 WORKDIR /app
