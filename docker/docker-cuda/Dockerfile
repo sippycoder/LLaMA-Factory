@@ -18,7 +18,7 @@ ARG PIP_INDEX=https://pypi.org/simple
 WORKDIR /app
 
 # Install for NVMe offloading
-RUN apt-get install -y libaio-dev
+RUN apt-get update && apt-get install -y libaio-dev
 
 # Install the requirements
 COPY requirements.txt /app
