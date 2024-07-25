@@ -17,6 +17,9 @@ ARG PIP_INDEX=https://pypi.org/simple
 # Set the working directory
 WORKDIR /app
 
+# Install for NVMe offloading
+RUN apt-get install -y libaio-dev
+
 # Install the requirements
 COPY requirements.txt /app
 RUN pip config set global.index-url "$PIP_INDEX" && \
@@ -38,6 +41,9 @@ RUN EXTRA_PACKAGES="metrics"; \
     if [ "$INSTALL_DEEPSPEED" == "true" ]; then \
         EXTRA_PACKAGES="${EXTRA_PACKAGES},deepspeed"; \
     fi; \
+    DS_BUILD_OPS=0 DS_BUILD_AIO=1 DS_BUILD_UTILS=1 \
+    DS_BUILD_FUSED_ADAM=1 DS_BUILD_EVOFORMER_ATTN=0 DS_BUILD_TRANSFORMER=1 \
+    DS_BUILD_STOCHASTIC_TRANSFORMER=1 DS_BUILD_SPARSE_ATTN=0 \
     pip install -e ".[$EXTRA_PACKAGES]"
 
 # Rebuild flash attention
